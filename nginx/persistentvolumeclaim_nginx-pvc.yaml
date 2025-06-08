@@ -8,7 +8,6 @@ metadata:
   - kubernetes.io/pvc-protection
   name: nginx-pvc
   namespace: nginx
-  resourceVersion: "16246"
   uid: 77e43940-6f38-4db9-9428-f99240430dea
 spec:
   accessModes:
