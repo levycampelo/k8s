@@ -3,6 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   name: nginx-pvc
   namespace: nginx
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   accessModes:
     - ReadWriteOnce
