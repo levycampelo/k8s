@@ -1,14 +1,15 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nginx-pvc
+  name: nginx-pvc-local
   namespace: nginx
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: local-storage
+  storageClassName: local
+  volumeAttributesClassName: local
   resources:
     requests:
       storage: 1Gi
