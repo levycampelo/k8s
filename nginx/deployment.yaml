@@ -13,6 +13,8 @@ spec:
       labels:
         app: nginx
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: master0   # <- força o agendamento no nó master0
       containers:
         - name: nginx
           image: nginx:latest
